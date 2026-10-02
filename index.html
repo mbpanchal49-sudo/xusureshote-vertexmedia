@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X SURESHOTE Landing Page</title>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1115740714267896');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1115740714267896&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0a0a0a;
+            background: radial-gradient(circle at center, #1e1145 0%, #0a0a0a 70%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        /* Main Card Container */
+        .card {
+            background: rgba(25, 25, 35, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 30px 25px;
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(80, 40, 200, 0.4);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        /* Top Ad Badge */
+        .ad-badge {
+            background: linear-gradient(90deg, #ff7e00, #ffb800);
+            color: #000;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(255, 126, 0, 0.4);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .ad-badge:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 14px rgba(255, 126, 0, 0.6);
+        }
+
+        /* Profile Avatar Container */
+        .avatar-container {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, #00d2ff, #3a7bd5, #9d00ff);
+            box-shadow: 0 0 25px rgba(0, 210, 255, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #1a1a1a;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        p.subtitle {
+            font-size: 12px;
+            color: #a0a0a0;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            padding: 0 10px;
+        }
+
+        /* Main CTA Button */
+        .join-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background: linear-gradient(90deg, #ff5e00, #ff007a);
+            color: white;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 15px;
+            text-transform: uppercase;
+            box-shadow: 0 5px 20px rgba(255, 0, 122, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .join-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 0, 122, 0.6);
+        }
+
+        /* 3-Grid Stats Box */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px 5px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-item .value {
+            font-weight: 700;
+            font-size: 14px;
+            color: #00d2ff;
+            margin-bottom: 2px;
+        }
+        
+        .stat-item:nth-child(2) .value { color: #00d2ff; }
+        .stat-item:nth-child(3) .value { color: #00d2ff; }
+
+        .stat-item .label {
+            font-size: 10px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Feature List */
+        .features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 13px;
+            color: #ddd;
+            text-align: left;
+        }
+
+        .feature-item i {
+            font-size: 14px;
+        }
+
+        /* Bottom Button */
+        .join-now-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(90deg, #ff5e00, #ff007a);
+            color: white;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 15px;
+            text-transform: uppercase;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(255, 0, 122, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .join-now-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 0, 122, 0.6);
+        }
+
+        /* Footer Copyright */
+        .footer-text {
+            margin-top: 25px;
+            font-size: 11px;
+            color: #555;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Top Ad Badge: vertexmedia with link -->
+        <a href="https://t.me/+_SHah9H6FK44OWE1" class="ad-badge" target="_blank" rel="noopener noreferrer">Ad Setup by vertexmedia</a>
+
+        <!-- Avatar Logo -->
+        <div class="avatar-container">
+            <img src="https://i.ibb.co/zHWS3kLL/photo-2024-02-13-20-25-24.jpg" alt="X SURESHOTE Logo">
+        </div>
+
+        <!-- Main Heading -->
+        <h1>X SURESHOTE</h1>
+        <p class="subtitle">Join our premium Telegram community with a clean, modern experience and instant updates.</p>
+
+        <!-- Main CTA Button (Subscribe event fired) -->
+        <a href="https://t.me/+eIJoEDpoTaw3ZGU1" class="join-btn" id="mainJoinBtn" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-telegram-plane"></i> JOIN TELEGRAM
+        </a>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="value">24/7</div>
+                <div class="label">Active</div>
+            </div>
+            <div class="stat-item">
+                <div class="value">Fast</div>
+                <div class="label">Updates</div>
+            </div>
+            <div class="stat-item">
+                <div class="value">VIP</div>
+                <div class="label">Community</div>
+            </div>
+        </div>
+
+        <!-- Features List -->
+        <div class="features-list">
+            <div class="feature-item">
+                <i class="fas fa-star" style="color: #ffb800;"></i>
+                <span>Premium Community Experience</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-bolt" style="color: #ff5e00;"></i>
+                <span>Instant Notifications</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-shield-alt" style="color: #00d2ff;"></i>
+                <span>Secure & Mobile Friendly</span>
+            </div>
+        </div>
+
+        <!-- Bottom CTA Button (Subscribe event fired) -->
+        <a href="https://t.me/+eIJoEDpoTaw3ZGU1" class="join-now-btn" id="bottomJoinBtn" target="_blank" rel="noopener noreferrer">JOIN NOW</a>
+
+    </div>
+
+    <!-- Footer Copyright -->
+    <div class="footer-text">© 2026 X SURESHOTE</div>
+
+    <!-- Meta Pixel Subscribe Event Tracking -->
+    <script>
+        // Function to fire Subscribe event
+        function fireSubscribeEvent(buttonName) {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Subscribe', {
+                    content_name: buttonName,
+                    content_category: 'Telegram Join',
+                    value: 1.00,
+                    currency: 'USD'
+                });
+                console.log('Meta Subscribe event fired from: ' + buttonName);
+            } else {
+                console.warn('Meta Pixel not loaded, Subscribe event not fired.');
+            }
+        }
+
+        // Attach event listeners to both join buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            var mainBtn = document.getElementById('mainJoinBtn');
+            var bottomBtn = document.getElementById('bottomJoinBtn');
+
+            if (mainBtn) {
+                mainBtn.addEventListener('click', function() {
+                    fireSubscribeEvent('Main Join Telegram Button');
+                });
+            }
+
+            if (bottomBtn) {
+                bottomBtn.addEventListener('click', function() {
+                    fireSubscribeEvent('Bottom Join Now Button');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
